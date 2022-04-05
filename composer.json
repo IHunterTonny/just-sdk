@@ -1,0 +1,25 @@
+{
+    "name": "just/api",
+    "description": "SDK library for public API",
+    "autoload": {
+        "psr-4": {
+            "Just\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "IHunterTonny",
+            "email": "i.huntertonny@gmail.com"
+        }
+    ],
+    "require": {
+        "psr/http-factory": "^1.0",
+        "psr/http-client": "^1.0",
+        "php-http/client-common": "^2.5",
+        "php": ">=7.4"
+    },
+    "require-dev": {
+        "php-http/curl-client": "^2.2",
+        "laminas/laminas-diactoros": "^2.9"
+    }
+}
