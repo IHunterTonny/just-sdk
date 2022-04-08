@@ -4,7 +4,7 @@ namespace Just\HttpClient;
 
 use Psr\Http\Message\ResponseInterface;
 
-class ResponseMediator
+class ResponseFormatter
 {
     public static function getContent(ResponseInterface $response)
     {

@@ -12,7 +12,7 @@ use Http\Client\Common\HttpMethodsClientInterface;
 use Http\Client\Common\Plugin;
 use Http\Client\Common\PluginClientFactory;
 
-final class Builder
+class Builder
 {
     private ClientInterface $httpClient;
     private RequestFactoryInterface $requestFactoryInterface;
