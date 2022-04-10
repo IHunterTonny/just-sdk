@@ -22,13 +22,13 @@ class Options
     private function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
-            'client_builder' => new Builder(),
-            'uri_factory' => Psr17FactoryDiscovery::findUriFactory(),
+            'clientBuilder' => new Builder(),
+            'uriFactory' => Psr17FactoryDiscovery::findUriFactory(),
             'uri' => 'https://just-kill.cc/api',
             'apiVersion' => 'v2',
         ]);
-        $resolver->setAllowedTypes('client_builder', Builder::class);
-        $resolver->setAllowedTypes('uri_factory', UriFactoryInterface::class);
+        $resolver->setAllowedTypes('clientBuilder', Builder::class);
+        $resolver->setAllowedTypes('uriFactory', UriFactoryInterface::class);
         $resolver->setAllowedTypes('uri', 'string');
         $resolver->setAllowedTypes('apiVersion', 'string');
     }

@@ -10,7 +10,12 @@
     ],
     "autoload": {
         "psr-4": {
-            "Just\\": "src/"
+            "Just\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Just\\Tests\\": "tests"
         }
     },
     "config": {
@@ -24,7 +29,9 @@
         "symfony/options-resolver": "^5.2"
     },
     "require-dev": {
+        "laminas/laminas-diactoros": "^2.9",
         "php-http/curl-client": "^2.2",
-        "laminas/laminas-diactoros": "^2.9"
+        "php-http/mock-client": "^1.5",
+        "phpunit/phpunit": "^9.5"
     }
 }
