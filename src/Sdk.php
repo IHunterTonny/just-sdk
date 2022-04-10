@@ -8,19 +8,14 @@ use Http\Client\Common\Plugin\HeaderDefaultsPlugin;
 use Just\Api\ApiInterface;
 use Just\HttpClient\Builder;
 
-/**
- * Example:
- *      $options = new Options([
-            'uri' => 'http://0.0.0.0:8086/api',
-        ]);
- *      (new \Just\Sdk($options))->api('car')->result();
- */
 class Sdk
 {
     private Builder $clientBuilder;
 
-    public function __construct(Options $options)
+    public function __construct(Options $options = null)
     {
+        $options = $options ?: new Options();
+
         $this->clientBuilder = $options->getClientBuilder();
         $this->clientBuilder->addPlugin(
             new BaseUriPlugin($options->getUri())
