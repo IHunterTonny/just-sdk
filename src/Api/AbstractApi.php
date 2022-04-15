@@ -16,10 +16,24 @@ abstract class AbstractApi implements ApiInterface
         $this->responseFormatter = $responseFormatter ?: new ResponseFormatter();
     }
 
-    protected function get($uri, array $headers = [])
+    protected function post($uri, array $parameters = [], array $headers = [])
     {
+        // Add apiKey
+        $parameters = array_merge($parameters, [
+            'api_key' => $this->sdk->getApiKey(),
+        ]);
+
         return $this->responseFormatter::getContent(
-            $this->sdk->getHttpClient()->get($uri, $headers)
+            $this->sdk->getHttpClient()->post(
+                $uri,
+                $headers,
+                $this->createJsonBody($parameters)
+            )
         );
+    }
+
+    protected function createJsonBody(array $parameters)
+    {
+        return (count($parameters) === 0) ? null : json_encode($parameters, empty($parameters) ? JSON_FORCE_OBJECT : 0);
     }
 }

@@ -11,11 +11,17 @@ use Just\HttpClient\Builder;
 class Sdk
 {
     private Builder $clientBuilder;
+    private string $apiKey;
 
-    public function __construct(Options $options = null)
+    public function __construct(string $apiKey, Options $options = null)
     {
-        $options = $options ?: new Options();
+        // Auth
+        if (!$this->apiKey = $apiKey) {
+            throw new \InvalidArgumentException('Required argument "api_key" has not been provided');
+        }
 
+        // Configure client
+        $options = $options ?: new Options();
         $this->clientBuilder = $options->getClientBuilder();
         $this->clientBuilder->addPlugin(
             new BaseUriPlugin($options->getUri())
@@ -46,5 +52,10 @@ class Sdk
         }
 
         return $api;
+    }
+
+    public function getApiKey(): string
+    {
+        return $this->apiKey;
     }
 }

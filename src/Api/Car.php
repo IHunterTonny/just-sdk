@@ -4,8 +4,8 @@ namespace Just\Api;
 
 class Car extends AbstractApi
 {
-    public function result()
+    public function result($parameters = [])
     {
-        return $this->get('/car/result');
+        return $this->post('/car/result', $parameters);
     }
 }
