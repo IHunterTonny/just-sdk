@@ -19,7 +19,7 @@ Add package repository in `composer.json` of your project:
 ## Quick install
 This command will get you up and running quickly with Guzzle HTTP client, adapter and factory:
 ```bash
-composer require just/api:dev-main guzzlehttp/guzzle:^7.0.1 php-http/guzzle7-adapter http-interop/http-factory-guzzle 
+composer require just/api:dev-main guzzlehttp/guzzle:^7.0 php-http/guzzle7-adapter http-interop/http-factory-guzzle 
 ```
 
 ## Advanced install

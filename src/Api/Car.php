@@ -2,11 +2,9 @@
 
 namespace Just\Api;
 
-use Psr\Http\Message\ResponseInterface;
-
 class Car extends AbstractApi
 {
-    public function result(): ResponseInterface
+    public function result()
     {
         return $this->get('/car/result');
     }
