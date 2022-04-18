@@ -42,7 +42,7 @@ $data = $sdk->api('car')->result();
 
 // With specific parameters
 $sdk = \Just\Sdk('your_api_key');
-$data = $sdk->api('car')->result('id1,id2');
+$data = $sdk->api('car')->result(['ids' => 'id1,id2,...,idN']);
 
 // From `$sdk` object, you have access to all available PHP Just API endpoints. E.g.:
 ```
