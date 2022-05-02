@@ -22,7 +22,9 @@ abstract class TestCase extends \PHPUnit\Framework\TestCase
 
     protected function givenSdk(): Sdk
     {
-        return new Sdk(new Options([
+        return new Sdk(
+            'xxx-xxx',
+            new Options([
             'clientBuilder' => new Builder($this->mockClient),
         ]));
     }

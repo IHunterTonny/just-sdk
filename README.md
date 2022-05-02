@@ -38,11 +38,11 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 // Simple
 $sdk = \Just\Sdk('your_api_key');
-$data = $sdk->api('car')->result();
+$data = $sdk->api('car')->all();
 
 // With specific parameters
 $sdk = \Just\Sdk('your_api_key');
-$data = $sdk->api('car')->result(['ids' => 'id1,id2,...,idN']);
+$data = $sdk->api('car')->all(['ids' => 'id1,id2,...,idN']);
 
 // From `$sdk` object, you have access to all available PHP Just API endpoints. E.g.:
 ```
@@ -62,6 +62,7 @@ $sdk = \Just\Sdk(
         'apiVersion' => 'v2',
     ])
 );
-$data = $sdk->api('car')->result();
+$data = $sdk->api('car')->all();
 
 // From `$sdk` object, you have access to all available PHP Just API endpoints. E.g.:
+```
