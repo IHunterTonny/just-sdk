@@ -18,9 +18,4 @@ class CcChecker extends AbstractApi
     {
         return $this->post('/cc-checker/get-order', $parameters);
     }
-
-    public function price($parameters = [])
-    {
-        return $this->post('/cc-checker/price', $parameters);
-    }
 }

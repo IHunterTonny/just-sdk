@@ -13,4 +13,9 @@ class Postage extends AbstractApi
     {
         return $this->post('/postage/create', $parameters);
     }
+
+    public function download($parameters = [])
+    {
+        return $this->post('/postage/download', $parameters);
+    }
 }

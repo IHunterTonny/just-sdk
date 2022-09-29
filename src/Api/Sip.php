@@ -13,4 +13,9 @@ class Sip extends AbstractApi
     {
         return $this->post('/sip/set-caller-id', $parameters);
     }
+
+    public function changeVoice($parameters = [])
+    {
+        return $this->post('/sip/change-voice', $parameters);
+    }
 }

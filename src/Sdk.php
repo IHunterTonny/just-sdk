@@ -59,6 +59,10 @@ class Sdk
                 $api = new \Just\Api\Balance($this);
                 break;
 
+            case 'banner':
+                $api = new \Just\Api\Banner($this);
+                break;
+
             case 'ca-checker':
                 $api = new \Just\Api\CaChecker($this);
                 break;
@@ -87,6 +91,10 @@ class Sdk
                 $api = new \Just\Api\CcChecker($this);
                 break;
 
+            case 'credit-score-report':
+                $api = new \Just\Api\CreditScoreReport($this);
+                break;
+
             case 'dl-mvr':
                 $api = new \Just\Api\DlMvr($this);
                 break;
@@ -103,6 +111,10 @@ class Sdk
                 $api = new \Just\Api\EmailTask($this);
                 break;
 
+            case 'guarantee':
+                $api = new \Just\Api\Guarantee($this);
+                break;
+
             case 'ma-checker':
                 $api = new \Just\Api\MaChecker($this);
                 break;
@@ -115,6 +127,10 @@ class Sdk
                 $api = new \Just\Api\Mms($this);
                 break;
 
+            case 'nj-claimants':
+                $api = new \Just\Api\NjClaimants($this);
+                break;
+
             case 'persons-info':
                 $api = new \Just\Api\PersonsInfo($this);
                 break;
@@ -125,6 +141,10 @@ class Sdk
 
             case 'phone-info':
                 $api = new \Just\Api\PhoneInfo($this);
+                break;
+
+            case 'physicians':
+                $api = new \Just\Api\Physicians($this);
                 break;
 
             case 'postage':
@@ -167,8 +187,16 @@ class Sdk
                 $api = new \Just\Api\SsnAnyYearAuto($this);
                 break;
 
+            case 'ticket':
+                $api = new \Just\Api\Ticket($this);
+                break;
+
             case 'ui-checker':
                 $api = new \Just\Api\UiChecker($this);
+                break;
+
+            case 'vpn':
+                $api = new \Just\Api\Vpn($this);
                 break;
 
             default:
